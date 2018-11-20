@@ -4,17 +4,19 @@
 html {
     background: url('/images/wave-background.svg') bottom center no-repeat;
     background-size: contain;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
     color: $text-color;
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
+    min-height: 100%;
+}
+
+.container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 h1 {
@@ -30,9 +32,8 @@ p {
     font-size: 1.5rem;
 }
 
-
-
 a.btn {
+    display: inline-block;
     background-color: $primary-color;
     color: #fff;
     text-transform: uppercase;
@@ -44,7 +45,9 @@ a.btn {
 main {
     display: grid;
     max-width: 75rem;
+    padding: 2rem;
     align-items: center;
+    margin: auto;
 
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4rem;
@@ -56,20 +59,13 @@ main {
     }
 
     .btn {
-        display: inline-block;
         margin-top: 0.34rem;
     }
-
 }
 
 footer {
     display: flex;
-
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 3rem 4rem;
 
     nav {

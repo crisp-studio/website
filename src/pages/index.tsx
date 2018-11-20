@@ -23,34 +23,36 @@ const index: React.SFC = () => (
       <link rel="stylesheet" href="https://use.typekit.net/dmd4zek.css" />
     </Helmet>
 
-    <main>
-      <article>
-        <h1>We are a Digital Product Studio</h1>
-        <p>
-          We support companies in validating and developing new and innovative product ideas and
-          bringing them to market quickly.
-        </p>
-        <a className="btn" href="https://crispstudio.typeform.com/to/fYqiES" target="_blank">
-          Contact us
-        </a>
-      </article>
-      <aside>
-        <img src={app} alt="Product Design" />
-      </aside>
-    </main>
+    <div className="container">
+      <main>
+        <article>
+          <h1>We are a Digital Product Studio</h1>
+          <p>
+            We support companies in validating and developing new and innovative product ideas and
+            bringing them to market quickly.
+          </p>
+          <a className="btn" href="https://crispstudio.typeform.com/to/fYqiES" target="_blank">
+            Contact us
+          </a>
+        </article>
+        <aside>
+          <img src={app} alt="Product Design" />
+        </aside>
+      </main>
 
-    <footer>
-      <img src={logo} alt="Crisp Studio Logo" />
+      <footer>
+        <img src={logo} alt="Crisp Studio Logo" />
 
-      <nav>
-        <a href="" target="_blank">
-          Disclaimer
-        </a>
-        <a href="/pdf/privacy.pdf" target="_blank">
-          Privacy
-        </a>
-      </nav>
-    </footer>
+        <nav>
+          <a href="" target="_blank">
+            Disclaimer
+          </a>
+          <a href="/pdf/privacy.pdf" target="_blank">
+            Privacy
+          </a>
+        </nav>
+      </footer>
+    </div>
   </>
 );
 
