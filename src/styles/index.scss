@@ -57,7 +57,7 @@ main {
     display: block;
     margin: auto;
     height: auto;
-    width: 100%;
+    width: 90%;
   }
 
   .btn {
@@ -95,13 +95,14 @@ footer {
 
   main {
     grid-template-columns: 3fr 2fr;
+    padding: 6rem;
   }
 }
 
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
-
+    padding: 4rem;
     img {
       max-width: 300px;
     }
@@ -109,6 +110,9 @@ footer {
 }
 
 @media (max-width: 540px) {
+  main {
+    padding: 2rem;
+  }
   h1 {
     font-size: 3rem;
   }
