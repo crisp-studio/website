@@ -28,7 +28,7 @@ const index: React.SFC = () => (
         <article>
           <h1>We are a Digital Product Studio</h1>
           <p>
-            We support companies in validating and developing new and innovative product ideas and
+            We support companies in validating and developing innovative product ideas and in
             bringing them to market quickly.
           </p>
           <a className="btn" href="https://crispstudio.typeform.com/to/fYqiES" target="_blank">
