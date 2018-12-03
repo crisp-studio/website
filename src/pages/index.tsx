@@ -44,7 +44,7 @@ const index: React.SFC = () => (
         <img src={logo} alt="Crisp Studio Logo" />
 
         <nav>
-          <a href="" target="_blank">
+          <a href="/pdf/disclaimer.pdf" target="_blank">
             Disclaimer
           </a>
           <a href="/pdf/privacy.pdf" target="_blank">
