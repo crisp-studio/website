@@ -51,13 +51,13 @@ main {
   margin: auto;
 
   grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
+  grid-gap: 8rem;
 
   img {
     display: block;
     margin: auto;
     height: auto;
-    width: 90%;
+    width: 100%;
   }
 
   .btn {
