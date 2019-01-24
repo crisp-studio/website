@@ -5,7 +5,7 @@ import Image from '../components/image'
 import Layout from '../components/layout';
 import Button from '../components/button';
 
-import icon from '../images/icons/arrow-circle-right.svg';
+import icon from 'eva-icons/fill/svg/arrow-circle-right.svg';
 
 const IndexPage = () => (
   <Layout>

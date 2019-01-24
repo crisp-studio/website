@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps & React.HTMLProps<HTMLAnchorElement>> = ({
 }) => (
   <a {...rest}>
     {children}
-    {icon && <img src={icon} alt="Icon" />}
+    {icon && <div className="icon" />}
   </a>
 )
 
@@ -26,7 +26,7 @@ export default styled(Button)<ButtonProps>`
   transition: box-shadow 0.2s, transform 0.2s;
 
   padding: 0 1rem;
-  height: 2.2rem;
+  height: 2rem;
 
   border-radius: ${p => p.theme.sizes.borderRadius};
   box-shadow: ${p => p.theme.shadows.elevation100};
@@ -44,11 +44,27 @@ export default styled(Button)<ButtonProps>`
   background-color: ${p => p.theme.colors.primary400};
   color: white;
 
+  // Icons
+  .icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 0.5rem;
+
+    background-color: white;
+    mask-size: contain;
+    mask-image: url('${p => p.icon}')
+  }
+
+  // Variants
   ${p =>
     p.variant == 'green' &&
     `
     background-color: ${p.theme.colors.accent200};
     color: ${p.theme.colors.accent700};
+
+    .icon {
+      background-color: ${p.theme.colors.accent700};
+    }
   `}
 
   ${p =>
@@ -56,12 +72,10 @@ export default styled(Button)<ButtonProps>`
     `
     background-color: white;
     color: ${p.theme.colors.primary400};
+
+    .icon {
+      background-color: ${p.theme.colors.primary400};
+    }
   `}
 
-  // Icons
-  img {
-    height: 20px;
-    width: auto;
-    margin-left: 0.5rem;
-  }
 `
