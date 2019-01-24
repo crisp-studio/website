@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: theme.default.colors.primary,
+        color: theme.default.colors.primary400,
         showSpinner: false,
       },
     },
@@ -29,8 +29,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: theme.default.colors.primary,
-        theme_color: theme.default.colors.primary,
+        background_color: theme.default.colors.primary400,
+        theme_color: theme.default.colors.primary400,
         display: `browser`,
         icon: `src/images/logo-circle.svg`
       }
