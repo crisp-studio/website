@@ -16,6 +16,7 @@ const IndexPage = () => (
     <Button variant="green">Hey there!</Button>
     <Button>Yooo!</Button>
     <Button variant="white" icon={icon}>Contact Us</Button>
+    <Instagram />
   </Layout>
 )
 
