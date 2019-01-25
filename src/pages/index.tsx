@@ -4,11 +4,14 @@ import { Link } from 'gatsby'
 import Image from '../components/image'
 import Layout from '../components/layout';
 import Button from '../components/button';
+import Nav from '../components/nav'
 
 import icon from '../images/icons/arrow-circle-right.svg';
 
 const IndexPage = () => (
   <Layout>
+    <Nav variant="light"/>
+
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
