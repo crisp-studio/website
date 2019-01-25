@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { buildUrl } from 'react-instafeed'
 
 import Image from '../components/image'
-import Layout from '../components/layout';
-import Button from '../components/button';
+import Layout from '../components/layout'
+import Button from '../components/button'
+import Input from '../components/input'
+import Instagram from '../components/instafeed'
 import Nav from '../components/nav'
 
-import icon from '../images/icons/arrow-circle-right.svg';
+// import icon from '../images/icons/arrow-circle-right.svg'
 
 const IndexPage = () => (
   <Layout>
