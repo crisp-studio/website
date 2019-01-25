@@ -21,7 +21,14 @@ const IndexPage = () => (
 
     <Button variant="green">Hey there!</Button>
     <Button>Yooo!</Button>
-    <Button variant="white" icon={icon}>Contact Us</Button>
+    {/* <Button variant="white" icon={icon}>
+      Contact Us
+    </Button> */}
+    <br />
+    <form>
+      <Input type="text" name="test" />
+    </form>
+    
     <Instagram />
   </Layout>
 )
