@@ -9,7 +9,7 @@ import Input from '../components/input'
 import Instagram from '../components/instafeed'
 import Nav from '../components/nav'
 
-// import icon from '../images/icons/arrow-circle-right.svg'
+import icon from 'eva-icons/fill/svg/arrow-circle-right.svg';
 
 const IndexPage = () => (
   <Layout>
