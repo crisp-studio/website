@@ -11,12 +11,10 @@ import Nav from '../components/nav'
 import FooterCTA from '../components/footerCTA'
 import FooterBar from '../components/footerBar'
 
-import icon from 'eva-icons/fill/svg/arrow-circle-right.svg';
+import icon from 'eva-icons/fill/svg/arrow-circle-right.svg'
 
 const IndexPage = () => (
   <Layout>
-    <Nav variant="light"/>
-
     <Nav variant="light" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -24,14 +22,12 @@ const IndexPage = () => (
 
     <Button variant="green">Hey there!</Button>
     <Button>Yooo!</Button>
-    {/* <Button variant="white" icon={icon}>
-      Contact Us
-    </Button> */}
+
     <br />
     <form>
       <Input type="text" name="test" />
     </form>
-    
+
     <Instagram />
     <FooterCTA />
     <FooterBar />
