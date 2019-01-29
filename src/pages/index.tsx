@@ -7,8 +7,6 @@ import Nav from '../components/nav'
 import FooterCTA from '../components/footerCTA'
 import FooterBar from '../components/footerBar'
 
-import icon from 'eva-icons/fill/svg/arrow-circle-right.svg'
-
 const IndexPage = () => (
   <Layout>
     <Nav variant="light" />
