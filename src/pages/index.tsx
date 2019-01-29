@@ -8,6 +8,8 @@ import Button from '../components/button'
 import Input from '../components/input'
 import Instagram from '../components/instafeed'
 import Nav from '../components/nav'
+import FooterCTA from '../components/footerCTA'
+import FooterBar from '../components/footerBar'
 
 import icon from 'eva-icons/fill/svg/arrow-circle-right.svg';
 
@@ -30,6 +32,8 @@ const IndexPage = () => (
     </form>
     
     <Instagram />
+    <FooterCTA />
+    <FooterBar />
   </Layout>
 )
 
