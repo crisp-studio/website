@@ -22,6 +22,7 @@ export default styled(Button)<ButtonProps>`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  margin-left: 0.5rem;
 
   transition: box-shadow 0.2s, transform 0.2s;
 
