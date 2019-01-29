@@ -95,7 +95,8 @@ const GridItem = styled.div`
   position: relative;
   cursor: pointer;
 
-  /* To-Do: 1:1 Ratio auf den Posts */
+  height: 0;
+  padding-bottom: 100%;
 
   transition: all 0.3s ease-in-out;
   box-shadow: ${p => p.theme.shadows.elevation100};
@@ -108,6 +109,7 @@ const GridItem = styled.div`
 `
 
 const GridImage = styled.img`
+  position: absolute;
   display: block;
   width: 100%;
   height: 100%;
