@@ -33,7 +33,7 @@ export default class Nav extends React.Component<NavProps, NavState, MenuProps> 
   }
 
   componentDidMount() {
-    window.matchMedia('(max-width: 1024px)').addListener(ev => {
+    window.matchMedia('(max-width: 736px)').addListener(ev => {
       if (!ev.matches) {
         this.setState({
           mobileMenuShown: false,
@@ -122,6 +122,10 @@ const MenuToggle = styled.div`
   top: 1rem;
   right: 2.5rem;
   cursor: pointer;
+  display: block;
+  ${breakpoint('tablet')`
+    display: none;
+  `};
 `
 
 const Logo = styled.svg`
@@ -129,21 +133,14 @@ const Logo = styled.svg`
   height: auto;
 `
 
-const Menu = styled.ul`
+const Menu = styled.ul<MenuProps>`
   padding: 0;
-  
-  /* ${props => {
-    if (props.visible) {
-      ;`display: flex;`
-    } else {
-      ;`display: none;`
-    }
-  }} */
-
   ${breakpoint('tablet')`
     display: flex;
     text-align: center;
   `}
+
+  ${p => (p.visible ? `` : `display: none`)}
 `
 
 const MenuItem = styled.li`
