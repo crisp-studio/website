@@ -1,8 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { buildUrl } from 'react-instafeed'
-
-import Image from '../components/image'
 import Layout from '../components/layout'
 import Button from '../components/button'
 import Input from '../components/input'
@@ -21,7 +17,7 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
 
     <Button variant="green">Hey there!</Button>
-    <Button>Yooo!</Button>
+    <Button icon={icon}>Yooo!</Button>
 
     <br />
     <form>
