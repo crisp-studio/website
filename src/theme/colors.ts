@@ -22,4 +22,6 @@ export default {
   gray300: '#9FB3C8',
   gray200: '#D9E2EC',
   gray100: '#F4F5FA',
+
+  supWhite: '#ffffff',
 }
