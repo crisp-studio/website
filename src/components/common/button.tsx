@@ -1,21 +1,23 @@
 import React from 'react'
 import styled from '../../util/styled-components'
 
+import Link from '../../util/link'
+
 interface ButtonProps {
   variant?: 'green' | 'white'
   icon?: any
 }
 
-const Button: React.FC<ButtonProps & React.HTMLProps<HTMLAnchorElement>> = ({
+const Button: React.FC<ButtonProps & React.ComponentProps<typeof Link>> = ({
   variant,
   children,
   icon,
   ...rest
 }) => (
-  <a {...rest}>
+  <Link {...rest}>
     {children}
     {icon && <div className="icon" />}
-  </a>
+  </Link>
 )
 
 export default styled(Button)<ButtonProps>`
