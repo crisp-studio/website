@@ -41,6 +41,7 @@ export default styled(Button)<ButtonProps>`
   font-size: 14px;
   letter-spacing: 0.75px;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: ${p => p.theme.colors.primary400};
   color: white;
