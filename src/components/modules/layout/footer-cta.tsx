@@ -44,6 +44,11 @@ const CtaContainer = styled(Container)`
     margin: 1rem 0;
   }
 
+  ${Button} {
+    margin: 0.5rem 0;
+    margin-left: 1rem;
+  }
+
   h4 {
     color: ${p => p.theme.colors.primary400};
   }
