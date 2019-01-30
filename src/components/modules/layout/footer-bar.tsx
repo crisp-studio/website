@@ -10,7 +10,7 @@ import { Section, Container } from '../../common/section'
 export default class FooterBar extends React.Component {
   render() {
     return (
-      <BlueSection>
+      <BlueSection as="footer">
         <FooterContainer>
           <FooterMenu>
             <li>
