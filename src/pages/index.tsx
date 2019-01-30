@@ -22,7 +22,6 @@ const IndexPage = () => (
     </form>
 
     <Instagram />
-    <FooterCTA />
   </Layout>
 )
 
