@@ -43,8 +43,8 @@ export default class Nav extends React.Component<NavProps, NavState> {
 
   render() {
     return (
-      <Section>
-        <NavContainer>
+      <HeaderSection>
+        <NavContainer as="nav">
           <MenuToggle onClick={this.toggleMenu}>
             <img src={hamburgerIcon} alt="Hamburger Menu Icon" />
           </MenuToggle>
@@ -68,14 +68,19 @@ export default class Nav extends React.Component<NavProps, NavState> {
           </li> */}
           </Menu>
         </NavContainer>
-      </Section>
+      </HeaderSection>
     )
   }
 }
 
+const HeaderSection = styled(Section)`
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+`
+
 const NavContainer = styled(Container)`
-  padding: 0;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.75px;
   text-transform: uppercase;
@@ -85,7 +90,7 @@ const NavContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 70px;
+    padding-top: 4rem;
     align-items: center;
   `}
 `
