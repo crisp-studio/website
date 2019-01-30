@@ -8,6 +8,8 @@ import styled from '../../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 // import instaIcon from '../components/instagram'
+import instagram from '../../../images/instagram.svg'
+
 import { Section, Container } from '../../common/section'
 
 export default class Instagram extends React.Component {
@@ -124,6 +126,11 @@ const GridHoverLink = styled.div`
   opacity: 0;
 
   transition: all 0.5s ease;
+
+  img {
+    width: 3rem;
+    height: auto;
+  }
 
   &:hover {
     opacity: 1;
