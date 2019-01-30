@@ -7,6 +7,7 @@ import theme from '../../../theme'
 
 import FooterBar from './footer-bar'
 import Nav from './nav'
+import FooterCta from './footer-cta'
 
 interface LayoutProps {
   variant: 'light' | 'dark'
@@ -17,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children, variant }) => (
     <>
       <Nav variant={variant} />
       <main>{children}</main>
+      <FooterCta />
       <FooterBar />
     </>
   </ThemeProvider>
