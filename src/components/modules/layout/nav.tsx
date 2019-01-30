@@ -52,7 +52,7 @@ export default class Nav extends React.Component<NavProps, NavState, MenuProps> 
           <MenuToggle onClick={this.toggleMenu}>
             <img src={hamburgerIcon} alt="Hamburger Menu Icon" />
           </MenuToggle>
-          <Logo>
+          <Logo to="/">
             <img src={crispLogo} alt="Crisp Studio Logo" />
           </Logo>
           <Menu visible={this.state.mobileMenuShown}>
@@ -107,7 +107,7 @@ const MenuToggle = styled.div`
   `};
 `
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   display: block;
 
   img {
