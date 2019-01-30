@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Layout from '../components/layout'
 import Button from '../components/button'
 import Input from '../components/input'
@@ -15,7 +16,6 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
 
     <Button variant="green">Hey there!</Button>
-    <Button icon={icon}>Yooo!</Button>
 
     <br />
     <form>
