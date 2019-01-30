@@ -20,13 +20,9 @@ interface MenuProps {
   visible: boolean
 }
 
-export default class Nav extends React.Component<NavProps, NavState, MenuProps> {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      mobileMenuShown: false,
-    }
+export default class Nav extends React.Component<NavProps, NavState> {
+  state = {
+    mobileMenuShown: false,
   }
 
   toggleMenu = () => {
