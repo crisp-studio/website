@@ -4,9 +4,11 @@ import styled from '../../../util/styled-components'
 import { Link } from 'gatsby'
 import breakpoint from 'styled-components-breakpoint'
 import hamburgerIcon from 'eva-icons/outline/svg/menu-outline.svg'
+import contactIcon from 'eva-icons/fill/svg/arrow-circle-right.svg'
 import crispLogo from '../../../images/logo-black.svg'
 
 import { Section, Container } from '../../common/section'
+import Button from '../../common/button'
 
 interface NavProps {
   variant?: 'light' | 'dark'
@@ -43,7 +45,7 @@ export default class Nav extends React.Component<NavProps, NavState> {
 
   render() {
     return (
-      <HeaderSection>
+      <HeaderSection variant={this.props.variant}>
         <NavContainer as="nav">
           <MenuToggle onClick={this.toggleMenu}>
             <img src={hamburgerIcon} alt="Hamburger Menu Icon" />
@@ -61,11 +63,14 @@ export default class Nav extends React.Component<NavProps, NavState> {
             <MenuItem>
               <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
-            {/* <li>
-            <MenuItemLink href="https://medium.com/crispstudio">
-              Blog
-            </MenuItemExternal>
-          </li> */}
+            <MenuItem>
+              <MenuItemLink href="/about/">Blog</MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <Button href="/contact/" icon={contactIcon}>
+                Contact Us
+              </Button>
+            </MenuItem>
           </Menu>
         </NavContainer>
       </HeaderSection>
@@ -73,11 +78,7 @@ export default class Nav extends React.Component<NavProps, NavState> {
   }
 }
 
-const HeaderSection = styled(Section)`
-  position: absolute;
-  width: 100%;
-  z-index: 5;
-`
+const HeaderSection = styled(Section)<NavProps>``
 
 const NavContainer = styled(Container)`
   font-size: 1rem;
@@ -120,6 +121,7 @@ const Logo = styled(Link)`
 const Menu = styled.ul<MenuProps>`
   ${breakpoint('tablet')`
     display: flex;
+    align-items: center;
     text-align: center;
   `}
 
@@ -127,12 +129,15 @@ const Menu = styled.ul<MenuProps>`
 `
 
 const MenuItem = styled.li`
+  ${Button} {
+    margin-left: 4rem;
+  }
+
   ${breakpoint('mobile')`
     padding: 0.2rem 0rem;
   `}
 `
 
-// Muss ich nicht hier noch typen? styled(Link)<LinkProps>
 const MenuItemLink = styled(Link)`
   color: ${p => p.theme.colors.gray700};
   text-decoration: none;
