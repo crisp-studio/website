@@ -7,7 +7,6 @@ import { render } from 'react-dom'
 import styled from '../../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-// import instaIcon from '../components/instagram'
 import instagram from '../../../images/instagram.svg'
 
 import { Section, Container } from '../../common/section'
