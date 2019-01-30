@@ -2,16 +2,21 @@ import React from 'react'
 import styled from '../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
+import { Section, Container } from './section'
+
 interface SplitContentProps {
   variant?: 'left' | 'right'
 }
 
-// ! Styled-Components not working
-
 const SplitContent: React.FC<
   SplitContentProps & React.HTMLProps<HTMLDivElement>
-> = ({ variant, children, className }) => <div className={className}>{children}</div>
-
+> = ({ variant, children, className }) => (
+  <Section>
+    <Container>
+      <div className={className}>{children}</div>
+    </Container>
+  </Section>
+)
 export default styled(SplitContent)`
   display: flex;
   justify-content: space-between;

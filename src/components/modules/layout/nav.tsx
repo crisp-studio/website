@@ -6,6 +6,8 @@ import breakpoint from 'styled-components-breakpoint'
 import hamburgerIcon from 'eva-icons/outline/svg/menu-outline.svg'
 import crispLogo from '../../../images/logo-black.svg'
 
+import { Section, Container } from '../../common/section'
+
 interface NavProps {
   variant?: 'light' | 'dark'
 }
@@ -45,35 +47,38 @@ export default class Nav extends React.Component<NavProps, NavState, MenuProps> 
 
   render() {
     return (
-      <Container>
-        <MenuToggle onClick={this.toggleMenu}>
-          <img src={hamburgerIcon} alt="Hamburger Menu Icon" />
-        </MenuToggle>
-        <Logo>
-          <img src={crispLogo} alt="Crisp Studio Logo" />
-        </Logo>
-        <Menu visible={this.state.mobileMenuShown}>
-          <MenuItem>
-            <MenuItemLink to="/another-page/">Design Sprint</MenuItemLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuItemLink to="/another-page/">Dev Sprint</MenuItemLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuItemLink to="/studio/">Studio</MenuItemLink>
-          </MenuItem>
-          {/* <li>
-          <MenuItemLink href="https://medium.com/crispstudio">
-            Blog
-          </MenuItemExternal>
-        </li> */}
-        </Menu>
-      </Container>
+      <Section>
+        <NavContainer>
+          <MenuToggle onClick={this.toggleMenu}>
+            <img src={hamburgerIcon} alt="Hamburger Menu Icon" />
+          </MenuToggle>
+          <Logo>
+            <img src={crispLogo} alt="Crisp Studio Logo" />
+          </Logo>
+          <Menu visible={this.state.mobileMenuShown}>
+            <MenuItem>
+              <MenuItemLink to="/another-page/">Design Sprint</MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuItemLink to="/another-page/">Dev Sprint</MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuItemLink to="/studio/">Studio</MenuItemLink>
+            </MenuItem>
+            {/* <li>
+            <MenuItemLink href="https://medium.com/crispstudio">
+              Blog
+            </MenuItemExternal>
+          </li> */}
+          </Menu>
+        </NavContainer>
+      </Section>
     )
   }
 }
 
-const Container = styled.div`
+const NavContainer = styled(Container)`
+  padding: 0;
   font-size: 1 rem;
   font-weight: bold;
   letter-spacing: 0.75px;
@@ -112,7 +117,6 @@ const Logo = styled.a`
 `
 
 const Menu = styled.ul<MenuProps>`
-  padding: 0;
   ${breakpoint('tablet')`
     display: flex;
     text-align: center;
