@@ -29,6 +29,7 @@ const BetterLink = (props: GatsbyLinkProps<any>): any => {
       <a
         {...anchorLinkProps}
         href={props.to.replace(sectionPrefix, '#')}
+        target={props.target || 'blank'}
         onClick={scrollToElement}
       >
         {props.children}
