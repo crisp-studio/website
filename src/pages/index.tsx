@@ -9,8 +9,7 @@ import FooterCTA from '../components/modules/layout/footer-cta'
 import FooterBar from '../components/modules/layout/footer-bar'
 
 const IndexPage = () => (
-  <Layout>
-    <Nav variant="light" />
+  <Layout variant="light">
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -24,7 +23,6 @@ const IndexPage = () => (
 
     <Instagram />
     <FooterCTA />
-    <FooterBar />
   </Layout>
 )
 
