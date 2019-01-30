@@ -67,7 +67,11 @@ export default class Nav extends React.Component<NavProps, NavState> {
               <MenuItemLink to="https://medium.com/crispstudio">Blog</MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <Button href="/contact/" icon={contactIcon}>
+              <Button
+                href="/contact/"
+                variant={this.props.variant === 'dark' ? 'white' : undefined}
+                icon={contactIcon}
+              >
                 Contact Us
               </Button>
             </MenuItem>
@@ -78,7 +82,19 @@ export default class Nav extends React.Component<NavProps, NavState> {
   }
 }
 
-const HeaderSection = styled(Section)<NavProps>``
+const HeaderSection = styled(Section)<NavProps>`
+  color: ${p => p.theme.colors.gray700};
+
+  ${p =>
+    p.variant === 'dark' &&
+    `
+    color: ${p.theme.colors.supWhite};
+
+    img {
+      filter: invert(100%) brightness(200%);
+    }
+  `}
+`
 
 const NavContainer = styled(Container)`
   font-size: 1rem;
@@ -139,7 +155,7 @@ const MenuItem = styled.li`
 `
 
 const MenuItemLink = styled(Link)`
-  color: ${p => p.theme.colors.gray700};
+  color: inherit;
   text-decoration: none;
 
   ${breakpoint('tablet')`
