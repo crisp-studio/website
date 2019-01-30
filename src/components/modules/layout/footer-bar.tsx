@@ -21,9 +21,15 @@ export default class FooterBar extends React.Component {
             </li>
           </FooterMenu>
           <Social>
-            <SocialIcon src={instagram} />
-            <SocialIcon src={medium} />
-            <SocialIcon src={linkedin} />
+            <SocialLink href="#">
+              <SocialIcon src={instagram} />
+            </SocialLink>
+            <SocialLink href="#">
+              <SocialIcon src={medium} />
+            </SocialLink>
+            <SocialLink href="#">
+              <SocialIcon src={linkedin} />
+            </SocialLink>
           </Social>
         </FooterContainer>
       </BlueSection>
@@ -42,7 +48,6 @@ const FooterContainer = styled(Container)`
 
   color: ${p => p.theme.colors.supWhite};
   padding: 2rem;
-  padding-bottom: 1.5rem;
 
   ${breakpoint('tablet')`
     display: flex;
@@ -69,11 +74,11 @@ const FooterLink = styled.a`
   color: white;
   text-decoration: none;
 
-  padding: 0.5rem;
+  margin: 0.5rem;
 
   ${breakpoint('tablet')`
-    padding-left: 0;
-    padding-right: 1rem;
+    margin-left: 0;
+    margin-right: 1rem;
   `}
 `
 
@@ -81,6 +86,13 @@ const Social = styled.div`
   display: flex;
 `
 
-const SocialIcon = styled.img`
-  padding: 0.5rem;
+const SocialLink = styled.a`
+  margin: 0 0.5rem;
+
+  ${breakpoint('tablet')`
+    margin-left: 1rem;
+    margin-right: 0;
+  `}
 `
+
+const SocialIcon = styled.img``
