@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '../../../util/styled-components'
 
-import { Link } from 'gatsby'
 import breakpoint from 'styled-components-breakpoint'
 import hamburgerIcon from 'eva-icons/outline/svg/menu-outline.svg'
 import contactIcon from 'eva-icons/fill/svg/arrow-circle-right.svg'
@@ -9,6 +8,7 @@ import crispLogo from '../../../images/logo-black.svg'
 
 import { Section, Container } from '../../common/section'
 import Button from '../../common/button'
+import Link from '../../../util/link'
 
 interface NavProps {
   variant?: 'light' | 'dark'
@@ -64,7 +64,7 @@ export default class Nav extends React.Component<NavProps, NavState> {
               <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink href="/about/">Blog</MenuItemLink>
+              <MenuItemLink to="https://medium.com/crispstudio">Blog</MenuItemLink>
             </MenuItem>
             <MenuItem>
               <Button href="/contact/" icon={contactIcon}>
