@@ -2,8 +2,8 @@ import React from 'react'
 
 import './global-styles.css'
 import 'inter-ui/inter-ui.css'
-import { ThemeProvider } from '../../util/styled-components'
-import theme from '../../theme'
+import { ThemeProvider } from '../../../util/styled-components'
+import theme from '../../../theme'
 import styled from 'styled-components'
 
 export default ({ children }) => (

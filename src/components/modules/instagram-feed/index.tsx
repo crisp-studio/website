@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import { buildUrl } from 'react-instafeed'
 
-import { options } from '../util/instafeed'
+import { options } from '../../../util/instafeed'
 import { render } from 'react-dom'
 
-import styled from '../util/styled-components'
+import styled from '../../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 // import instaIcon from '../components/instagram'

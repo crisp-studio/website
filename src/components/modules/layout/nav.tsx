@@ -1,10 +1,10 @@
 import React from 'react'
-import styled from '../util/styled-components'
+import styled from '../../../util/styled-components'
 
 import { Link } from 'gatsby'
 import breakpoint from 'styled-components-breakpoint'
 import hamburgerIcon from 'eva-icons/outline/svg/menu-outline.svg'
-import crispLogo from '../images/logo-black.svg'
+import crispLogo from '../../../images/logo-black.svg'
 
 interface NavProps {
   variant?: 'light' | 'dark'

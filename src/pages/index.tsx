@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import Button from '../components/button'
-import Input from '../components/input'
-import Instagram from '../components/instafeed'
-import Nav from '../components/nav'
-import FooterCTA from '../components/footerCTA'
-import FooterBar from '../components/footerBar'
+import Layout from '../components/modules/layout'
+import Button from '../components/common/button'
+import Input from '../components/common/input'
+import Instagram from '../components/modules/instagram-feed'
+import Nav from '../components/modules/layout/nav'
+import FooterCTA from '../components/modules/layout/footer-cta'
+import FooterBar from '../components/modules/layout/footer-bar'
 
 const IndexPage = () => (
   <Layout>

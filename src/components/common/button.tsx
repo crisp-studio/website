@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from '../util/styled-components'
+import styled from '../../util/styled-components'
 
 interface ButtonProps {
   variant?: 'green' | 'white'

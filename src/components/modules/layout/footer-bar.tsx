@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from '../util/styled-components'
+import styled from '../../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
-import instagram from '../images/instagram.svg'
-import medium from '../images/medium.svg'
-import linkedin from '../images/linkedin.svg'
+import instagram from '../../../images/instagram.svg'
+import medium from '../../../images/medium.svg'
+import linkedin from '../../../images/linkedin.svg'
 
 // TODO: On mobile container background is not extending to the sides
 // TODO: Social Media Icons are not aligned, need to be clickable

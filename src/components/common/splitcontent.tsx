@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from '../util/styled-components'
+import styled from '../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 interface SplitContentProps {

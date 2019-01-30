@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from '../util/styled-components'
+import styled from '../../../util/styled-components'
 
 import breakpoint from 'styled-components-breakpoint'
-import Button from '../components/button'
+import Button from '../../common/button'
 
 export default class FooterCTA extends React.Component {
   render() {
@@ -32,7 +32,7 @@ const Container = styled.div`
     div {
         text-align: center;
     }
-  `}  
+  `}
 
   display: flex;
   flex-direction: column;

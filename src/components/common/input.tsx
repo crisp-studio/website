@@ -1,4 +1,4 @@
-import styled from '../util/styled-components'
+import styled from '../../util/styled-components'
 
 interface InputProps {
   variant?: 'light' | 'dark'

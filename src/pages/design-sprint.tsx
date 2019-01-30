@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
-import Nav from '../components/nav'
-import FooterCTA from '../components/footerCTA'
-import FooterBar from '../components/footerBar'
-import SplitContent from '../components/splitcontent'
+import Nav from '../components/modules/layout/nav'
+import FooterCta from '../components/modules/layout/footer-cta'
+import FooterBar from '../components/modules/layout/footer-bar'
+import SplitContent from '../components/common/splitcontent'
 import svgDesignSprint from '../images/design-sprint-illustration.svg'
 
 // TODO: Titles need a different color, could change between components
