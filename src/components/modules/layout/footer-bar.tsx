@@ -7,10 +7,6 @@ import linkedin from '../../../images/linkedin.svg'
 
 import { Section, Container } from '../../common/section'
 
-// TODO: On mobile container background is not extending to the sides
-// TODO: Social Media Icons are not aligned, need to be clickable
-// ? Is it better to nest inside the container or to use different styled-components?
-
 export default class FooterBar extends React.Component {
   render() {
     return (
