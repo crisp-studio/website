@@ -5,6 +5,9 @@ import breakpoint from 'styled-components-breakpoint'
 import Button from '../../common/button'
 import { Section, Container } from '../../common/section'
 
+import phoneIcon from 'eva-icons/outline/svg/phone-call-outline.svg'
+import nextIcon from 'eva-icons/fill/svg/arrow-circle-right.svg'
+
 const FooterCta: React.FC = () => (
   <CtaSection>
     <CtaContainer>
@@ -13,8 +16,10 @@ const FooterCta: React.FC = () => (
         <p>Get in touch, we are happy to help out or just have a chat.</p>
       </div>
       <div>
-        <Button variant="white">Schedule call</Button>
-        <Button variant="white">Contact us</Button>
+        <Button icon={phoneIcon}>Schedule call</Button>
+        <Button icon={nextIcon} variant="white">
+          Contact us
+        </Button>
       </div>
     </CtaContainer>
   </CtaSection>
