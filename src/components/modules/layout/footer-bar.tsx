@@ -15,6 +15,8 @@ export default class FooterBar extends React.Component {
           <FooterMenu>
             <li>
               <FooterLink href="#">Disclaimer</FooterLink>
+            </li>
+            <li>
               <FooterLink href="#">Privacy Policy</FooterLink>
             </li>
           </FooterMenu>
@@ -34,33 +36,51 @@ const BlueSection = styled(Section)`
 `
 
 const FooterContainer = styled(Container)`
-  ${breakpoint('tablet')`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  `}
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
   color: ${p => p.theme.colors.supWhite};
-  padding: 1rem;
+  padding: 2rem;
+  padding-bottom: 1.5rem;
+
+  ${breakpoint('tablet')`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  `}
 `
 
 const FooterMenu = styled.ul`
   color: white;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  margin-bottom: 1rem;
+
+  ${breakpoint('tablet')`
+    margin-bottom: 0;
+  `}
 `
 
 const FooterLink = styled.a`
   color: white;
-  padding: 0rem 0.4rem;
   text-decoration: none;
+
+  padding: 0.5rem;
+
+  ${breakpoint('tablet')`
+    padding-left: 0;
+    padding-right: 1rem;
+  `}
 `
 
-const Social = styled.div``
+const Social = styled.div`
+  display: flex;
+`
 
 const SocialIcon = styled.img`
-  padding: 0rem 0.4rem;
+  padding: 0.5rem;
 `

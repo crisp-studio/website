@@ -3,37 +3,31 @@ import styled from '../../../util/styled-components'
 
 import breakpoint from 'styled-components-breakpoint'
 import Button from '../../common/button'
+import { Section, Container } from '../../common/section'
 
-export default class FooterCTA extends React.Component {
-  render() {
-    return (
-      <Container>
-        <div>
-          <h4>Ready to get started?</h4>
-          <p>Get in touch, we are happy to help out or just have a chat.</p>
-        </div>
-        <div>
-          <Button variant="white">Schedule call</Button>
-          <Button variant="white">Contact us</Button>
-        </div>
-      </Container>
-    )
-  }
-}
+const FooterCta: React.FC = () => (
+  <CtaSection>
+    <CtaContainer>
+      <div>
+        <h4>Ready to get started?</h4>
+        <p>Get in touch, we are happy to help out or just have a chat.</p>
+      </div>
+      <div>
+        <Button variant="white">Schedule call</Button>
+        <Button variant="white">Contact us</Button>
+      </div>
+    </CtaContainer>
+  </CtaSection>
+)
 
-const Container = styled.div`
-  ${breakpoint('tablet')`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    `}
-  ${breakpoint('mobile', 'tablet')`
-    div {
-        text-align: center;
-    }
-  `}
+export default FooterCta
 
+const CtaSection = styled(Section)`
+  background-color: ${p => p.theme.colors.gray100};
+  padding: 3rem 0;
+`
+
+const CtaContainer = styled(Container)`
   display: flex;
   flex-direction: column;
 
@@ -41,21 +35,24 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: ${p => p.theme.colors.gray100};
-
-  padding: 4rem 0rem;
+  > div {
+    margin: 1rem 0;
+  }
 
   h4 {
     color: ${p => p.theme.colors.primary400};
   }
 
-  &:before {
-    content: '';
-    background-color: ${p => p.theme.colors.gray100};
-    position: absolute;
-    height: 100%;
-    width: 400vw;
-    left: -2000px;
-    z-index: -1;
-  }
+  ${breakpoint('tablet')`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  `}
+
+  ${breakpoint('mobile', 'tablet')`
+    > div {
+      text-align: center;
+    }
+  `}
 `
