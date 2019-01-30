@@ -1,9 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "crisp-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Our website available at https://crisp.studio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Leo Bernard <leo@crisp.studio>",
+  "contributors": [
+    "Daniel Wirtz <daniel@crisp.studio>"
+  ],
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "eva-icons": "^1.1.1",
