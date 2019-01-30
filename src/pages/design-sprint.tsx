@@ -2,17 +2,11 @@ import React from 'react'
 import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
 import Nav from '../components/modules/layout/nav'
-import FooterCta from '../components/modules/layout/footer-cta'
-import FooterBar from '../components/modules/layout/footer-bar'
 import SplitContent from '../components/common/splitcontent'
 import svgDesignSprint from '../images/design-sprint-illustration.svg'
 
-// TODO: Titles need a different color, could change between components
-
 const DesignSprint = () => (
-  <Layout>
-    <Nav />
-
+  <Layout variant="light">
     <SplitContent>
       <div>
         <h4>What is a Design Sprint?</h4>
@@ -39,8 +33,6 @@ const DesignSprint = () => (
         </p>
       </div>
     </SplitContent>
-    <FooterCTA />
-    <FooterBar />
   </Layout>
 )
 
