@@ -11,11 +11,12 @@ export default styled.input<InputProps>`
   border: none;
   box-shadow: ${p => p.theme.shadows.inset100};
   background-color: ${p => p.theme.colors.gray100};
-  color: ${p => p.theme.colors.gray500}
+  color: ${p => p.theme.colors.gray500};
+
   ${p =>
     p.variant == 'dark' &&
     `
     background-color: ${p.theme.colors.gray500};
     color: ${p.theme.colors.gray100};
-  `}
+  `};
 `

@@ -45,4 +45,3 @@ export const CardHeader = styled(Header)`
     height: 2.5rem;
   }
 `
-
