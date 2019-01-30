@@ -2,7 +2,7 @@ export default {
   primary700: '#121E5D',
   primary600: '#162575',
   primary500: '#233DBA',
-  primary400: '#153cff',
+  primary400: '#2C4CE8',
   primary300: '#5670ED',
   primary200: '#D7DCF8',
   primary100: '#EDEFFD',
@@ -23,5 +23,5 @@ export default {
   gray200: '#D9E2EC',
   gray100: '#F4F5FA',
 
-  supWhite: '#ffffff',
+  supWhite: '#FFFFFF',
 }
