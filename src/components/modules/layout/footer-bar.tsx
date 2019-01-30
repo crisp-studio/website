@@ -5,6 +5,8 @@ import instagram from '../../../images/instagram.svg'
 import medium from '../../../images/medium.svg'
 import linkedin from '../../../images/linkedin.svg'
 
+import { Section, Container } from '../../common/section'
+
 // TODO: On mobile container background is not extending to the sides
 // TODO: Social Media Icons are not aligned, need to be clickable
 // ? Is it better to nest inside the container or to use different styled-components?
@@ -12,48 +14,43 @@ import linkedin from '../../../images/linkedin.svg'
 export default class FooterBar extends React.Component {
   render() {
     return (
-      <Container>
-        <FooterMenu>
-          <li>
-            <FooterLink href="#">Disclaimer</FooterLink>
-            <FooterLink href="#">Privacy Policy</FooterLink>
-          </li>
-        </FooterMenu>
-        <Social>
-          <SocialIcon src={instagram} />
-          <SocialIcon src={medium} />
-          <SocialIcon src={linkedin} />
-        </Social>
-      </Container>
+      <BlueSection>
+        <FooterContainer>
+          <FooterMenu>
+            <li>
+              <FooterLink href="#">Disclaimer</FooterLink>
+              <FooterLink href="#">Privacy Policy</FooterLink>
+            </li>
+          </FooterMenu>
+          <Social>
+            <SocialIcon src={instagram} />
+            <SocialIcon src={medium} />
+            <SocialIcon src={linkedin} />
+          </Social>
+        </FooterContainer>
+      </BlueSection>
     )
   }
 }
 
-const Container = styled.div`
+const BlueSection = styled(Section)`
+  background-color: ${p => p.theme.colors.primary300};
+`
+
+const FooterContainer = styled(Container)`
   ${breakpoint('tablet')`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    `}
+  `}
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  position: relative;
+
   color: ${p => p.theme.colors.supWhite};
-  background-color: ${p => p.theme.colors.primary300};
-  padding: 1rem 0rem;
-  &:before {
-    content: '';
-    background-color: ${p => p.theme.colors.primary300};
-    position: absolute;
-    height: 100%;
-    width: 400vw;
-    left: -2000px;
-    z-index: -1;
-  }
+  padding: 1rem;
 `
 
 const FooterMenu = styled.ul`
