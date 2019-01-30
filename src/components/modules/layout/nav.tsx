@@ -57,13 +57,13 @@ export default class Nav extends React.Component<NavProps, NavState, MenuProps> 
           </Logo>
           <Menu visible={this.state.mobileMenuShown}>
             <MenuItem>
-              <MenuItemLink to="/another-page/">Design Sprint</MenuItemLink>
+              <MenuItemLink to="/design-sprint/">Design Sprint</MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink to="/another-page/">Dev Sprint</MenuItemLink>
+              <MenuItemLink to="/dev-sprint/">Dev Sprint</MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink to="/studio/">Studio</MenuItemLink>
+              <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
             {/* <li>
             <MenuItemLink href="https://medium.com/crispstudio">
