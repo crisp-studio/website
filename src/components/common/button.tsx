@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '../../util/styled-components'
-
 import Link from '../../util/link'
 
 interface ButtonProps {
@@ -24,7 +23,6 @@ export default styled(Button)<ButtonProps>`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  margin-left: 0.5rem;
 
   transition: box-shadow 0.2s, transform 0.2s;
 
@@ -39,7 +37,7 @@ export default styled(Button)<ButtonProps>`
     transform: translateY(-2px);
   }
 
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.75px;
   text-transform: uppercase;

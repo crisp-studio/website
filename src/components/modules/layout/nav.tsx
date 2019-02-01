@@ -99,6 +99,7 @@ const HeaderSection = styled(Section)<NavProps>`
 const NavContainer = styled(Container)`
   font-size: 1rem;
   font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   padding-bottom: 1rem;
