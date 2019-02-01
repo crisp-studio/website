@@ -6,14 +6,14 @@ import animatedScroll from './animated-scroll'
 const sectionPrefix = '#'
 
 const BetterLink = (props: GatsbyLinkProps<any>): any => {
-  if (props.to && props.to.startsWith('/')) {
+  if (props.to.startsWith('/')) {
     const { ref, ...linkProps } = props
     return <Link {...linkProps}>{props.children}</Link>
   }
 
   const { activeClassName, ...anchorLinkProps } = props
 
-  if (props.to && props.to.startsWith(sectionPrefix)) {
+  if (props.to.startsWith(sectionPrefix)) {
     const scrollToElement = (ev: React.MouseEvent<HTMLAnchorElement>) => {
       const id = props.to.replace(sectionPrefix, '')
       const element = document.getElementById(id)
