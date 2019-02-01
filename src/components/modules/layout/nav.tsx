@@ -68,7 +68,7 @@ export default class Nav extends React.Component<NavProps, NavState> {
             </MenuItem>
             <MenuItem>
               <Button
-                href="/contact/"
+                to="/contact/"
                 variant={this.props.variant === 'dark' ? 'white' : undefined}
                 icon={contactIcon}
               >
@@ -84,6 +84,9 @@ export default class Nav extends React.Component<NavProps, NavState> {
 
 const HeaderSection = styled(Section)<NavProps>`
   color: ${p => p.theme.colors.gray700};
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 
   ${p =>
     p.variant === 'dark' &&
@@ -98,7 +101,6 @@ const HeaderSection = styled(Section)<NavProps>`
 
 const NavContainer = styled(Container)`
   font-size: 1rem;
-  font-weight: bold;
   font-weight: 500;
   letter-spacing: 0.75px;
   text-transform: uppercase;
@@ -126,7 +128,7 @@ const MenuToggle = styled.div`
   `};
 `
 
-const Logo = styled(Link)`
+const Logo = styled(Link)<NavProps>`
   display: block;
 
   img {
