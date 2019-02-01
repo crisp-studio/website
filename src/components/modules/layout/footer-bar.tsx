@@ -4,6 +4,7 @@ import breakpoint from 'styled-components-breakpoint'
 import instagram from '../../../images/instagram.svg'
 import medium from '../../../images/medium.svg'
 import linkedin from '../../../images/linkedin.svg'
+import Link from '../../../util/link'
 
 import { Section, Container } from '../../common/section'
 
@@ -14,20 +15,20 @@ export default class FooterBar extends React.Component {
         <FooterContainer>
           <FooterMenu>
             <li>
-              <FooterLink href="#">Disclaimer</FooterLink>
+              <FooterLink to="#">Disclaimer</FooterLink>
             </li>
             <li>
-              <FooterLink href="#">Privacy Policy</FooterLink>
+              <FooterLink to="#">Privacy Policy</FooterLink>
             </li>
           </FooterMenu>
           <Social>
-            <SocialLink href="#">
+            <SocialLink to="#">
               <SocialIcon src={instagram} />
             </SocialLink>
-            <SocialLink href="#">
+            <SocialLink to="#">
               <SocialIcon src={medium} />
             </SocialLink>
-            <SocialLink href="#">
+            <SocialLink to="#">
               <SocialIcon src={linkedin} />
             </SocialLink>
           </Social>
@@ -70,7 +71,7 @@ const FooterMenu = styled.ul`
   `}
 `
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   color: white;
   text-decoration: none;
 
@@ -86,7 +87,7 @@ const Social = styled.div`
   display: flex;
 `
 
-const SocialLink = styled.a`
+const SocialLink = styled(Link)`
   margin: 0 0.5rem;
 
   ${breakpoint('tablet')`
