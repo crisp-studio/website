@@ -22,6 +22,19 @@ export default styled(SplitContent)`
   justify-content: space-between;
   align-items: center;
 
+  div:nth-child(1) {
+    justify-content: flex-start;
+  }
+
+  div:nth-child(2) {
+    justify-content: flex-end;
+  }
+
+  > div {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
   padding: 4rem 0rem;
 
   p {
