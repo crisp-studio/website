@@ -16,8 +16,14 @@ const FooterCta: React.FC = () => (
         <p>Get in touch, we are happy to help out or just have a chat.</p>
       </div>
       <div>
-        <Button icon={phoneIcon}>Schedule call</Button>
-        <Button icon={nextIcon} variant="white">
+        <Button to="https://calendly.com/crisp-studio" icon={phoneIcon}>
+          Schedule call
+        </Button>
+        <Button
+          to="https://crispstudio.typeform.com/to/fYqiES"
+          icon={nextIcon}
+          variant="white"
+        >
           Contact us
         </Button>
       </div>
