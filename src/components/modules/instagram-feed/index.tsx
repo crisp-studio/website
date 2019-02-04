@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react'
 import { buildUrl } from 'react-instafeed'
-
-import { options } from '../../../util/instafeed'
-import { render } from 'react-dom'
-
-import styled from '../../../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import instagram from '../../../images/instagram.svg'
-
+import { options } from '../../../util/instafeed'
+import styled from '../../../util/styled-components'
 import { Section, Container } from '../../common/section'
+
+import instagram from '../../../images/instagram.svg'
 
 export default class Instagram extends React.Component {
   initialState = {
