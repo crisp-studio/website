@@ -4,53 +4,59 @@ import breakpoint from 'styled-components-breakpoint'
 
 import { Section, Container } from './section'
 
-interface SplitContentProps {
-  variant?: 'left' | 'right'
+interface SplitProps {
+  alternateSides?: boolean
+  alignItems?: 'flex-start' | 'center' | 'flex-end'
 }
 
-const SplitContent: React.FC<
-  SplitContentProps & React.HTMLProps<HTMLDivElement>
-> = ({ variant, children, className }) => (
+const SplitContent: React.FC<SplitProps & React.HTMLProps<HTMLDivElement>> = ({
+  children,
+  className,
+}) => (
   <Section className={className}>
     <Container className="children">{children}</Container>
   </Section>
 )
 export default styled(SplitContent)`
-  &:nth-child(2n) .children {
-    ${breakpoint('desktop')`
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  ${p =>
+    p.alternateSides &&
+    `&:nth-child(2n) .children {
+      ${breakpoint('desktop')`
+        flex-direction: row-reverse;
 
-    div {
-      justify-content: flex-end;
+        div {
+          justify-content: flex-end;
+        }
+      `}
     }
-    `}
-  }
+  `}
 
   .children {
     display: flex;
-    align-items: center;
-
-    ${breakpoint('mobile', 'tablet')`
-      flex-direction: column; 
-
-      div {
-        justify-content: center;
-      }
-      
-
-
-    `}
+    flex-grow: 1;
+    align-items: ${p => p.alignItems || 'center'};
 
     > div {
       flex-grow: 1;
       flex-basis: 0;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
-    padding: 4rem 1rem;
+    ${breakpoint('mobile', 'tablet')`
+      flex-direction: column;
 
-    p {
-      max-width: 28em;
-    }
+      > div {
+        justify-content: center;
+        margin-bottom: 4rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    `}
   }
 `

@@ -21,7 +21,7 @@ const About: React.FC<AboutProps> = ({ images }) => (
       </p>
     </StyledHeroHeader>
     <SplitContentWrapper>
-      <SplitContent>
+      <SplitContent alignItems="flex-start">
         <div>
           <h4>Small &amp; Focused</h4>
           <p>
@@ -41,7 +41,7 @@ const About: React.FC<AboutProps> = ({ images }) => (
           </p>
         </div>
       </SplitContent>
-      <SplitContent>
+      <SplitContent alignItems="flex-start">
         <div>
           <h4>User-Centered</h4>
           <p>
@@ -58,7 +58,7 @@ const About: React.FC<AboutProps> = ({ images }) => (
             investing the resources lowers risk, allows better decision making and
             leads to better results. Integrating stakeholders, aligning
             cross-functional teams lead to better questions which in turn lead to
-            better answers.{' '}
+            better answers.
           </p>
         </div>
       </SplitContent>
