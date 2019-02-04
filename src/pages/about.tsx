@@ -4,7 +4,7 @@ import GatsbyImage, { FluidObject } from 'gatsby-image'
 import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
 import SplitContent from '../components/common/splitcontent'
-import HeroHeader from '../components/common/heroheader'
+import HeroHeader from '../components/common/hero-header'
 import Gallery, { GalleryItem } from '../components/common/gallery'
 
 interface AboutProps {

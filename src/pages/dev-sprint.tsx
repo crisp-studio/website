@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/modules/layout'
-import HeroHeader from '../components/common/heroheader'
+import HeroHeader from '../components/common/hero-header'
 
 const Devsprint = () => (
   <Layout variant="light">

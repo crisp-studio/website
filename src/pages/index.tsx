@@ -4,7 +4,7 @@ import styled from '../util/styled-components'
 
 import Button from '../components/common/button'
 import Instagram from '../components/modules/instagram-feed'
-import HeroHeader from '../components/common/heroheader'
+import HeroHeader from '../components/common/hero-header'
 import Card, { CardHeader } from '../components/common/card'
 import targetIcon from '../images/icons/target.svg'
 import codeIcon from '../images/icons/code.svg'
