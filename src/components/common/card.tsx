@@ -34,6 +34,12 @@ export const CardHeader = styled(Header)`
   display: flex;
   align-items: center;
 
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   h5 {
     margin: 0;
     color: ${p => p.theme.colors.gray700};
