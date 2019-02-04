@@ -1,12 +1,13 @@
-require('ts-node').register();
+require('ts-node').register()
 
-const theme = require('./src/theme');
+const theme = require('./src/theme')
 
 module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -18,8 +19,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -32,8 +33,8 @@ module.exports = {
         background_color: theme.default.colors.primary400,
         theme_color: theme.default.colors.primary400,
         display: `browser`,
-        icon: `src/images/logo-circle.svg`
-      }
-    }
-  ]
-};
+        icon: `src/images/logo-circle.svg`,
+      },
+    },
+  ],
+}

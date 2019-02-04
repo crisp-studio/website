@@ -2,18 +2,24 @@ import { GatsbyLinkProps, Link } from 'gatsby'
 import React from 'react'
 
 import animatedScroll from './animated-scroll'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import theme from '../theme'
 
 const sectionPrefix = '#'
 
 const BetterLink = (props: GatsbyLinkProps<any>): any => {
-  if (props.to.startsWith('/')) {
+  if (props.to && props.to.startsWith('/')) {
     const { ref, ...linkProps } = props
-    return <Link {...linkProps}>{props.children}</Link>
+    return (
+      <AniLink cover bg={theme.colors.primary400} {...linkProps}>
+        {props.children}
+      </AniLink>
+    )
   }
 
   const { activeClassName, ...anchorLinkProps } = props
 
-  if (props.to.startsWith(sectionPrefix)) {
+  if (props.to && props.to.startsWith(sectionPrefix)) {
     const scrollToElement = (ev: React.MouseEvent<HTMLAnchorElement>) => {
       const id = props.to.replace(sectionPrefix, '')
       const element = document.getElementById(id)
