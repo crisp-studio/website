@@ -1,6 +1,6 @@
 /*
   RESET CSS
-  http://meyerweb.com/eric/tools/css/reset/ 
+  http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
 */
@@ -181,6 +181,6 @@ h6 {
 p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   color: #829ab1;
 }
