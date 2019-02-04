@@ -22,13 +22,13 @@ export default class FooterBar extends React.Component {
             </li>
           </FooterMenu>
           <Social>
-            <SocialLink to="#">
+            <SocialLink to="https://www.instagram.com/crispstudio/">
               <SocialIcon src={instagram} />
             </SocialLink>
-            <SocialLink to="#">
+            <SocialLink to="https://medium.com/crispstudio">
               <SocialIcon src={medium} />
             </SocialLink>
-            <SocialLink to="#">
+            <SocialLink to="https://www.linkedin.com/company/18551677/admin/">
               <SocialIcon src={linkedin} />
             </SocialLink>
           </Social>
