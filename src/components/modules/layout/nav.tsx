@@ -54,21 +54,21 @@ export default class Nav extends React.Component<NavProps, NavState> {
             <img src={crispLogo} alt="Crisp Studio Logo" />
           </Logo>
           <Menu visible={this.state.mobileMenuShown}>
-            <MenuItem>
+            <MenuItem variant={this.props.variant}>
               <MenuItemLink to="/design-sprint/">Design Sprint</MenuItemLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem variant={this.props.variant}>
               <MenuItemLink to="/dev-sprint/">Dev Sprint</MenuItemLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem variant={this.props.variant}>
               <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem variant={this.props.variant}>
               <MenuItemLink to="https://medium.com/crispstudio">Blog</MenuItemLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem variant={this.props.variant}>
               <Button
-                to="/contact/"
+                to="https://crispstudio.typeform.com/to/fYqiES"
                 variant={this.props.variant === 'dark' ? 'white' : undefined}
                 icon={contactIcon}
               >
@@ -105,6 +105,7 @@ const NavContainer = styled(Container)`
   letter-spacing: 0.75px;
   text-transform: uppercase;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 
   ${breakpoint('tablet')`
     display: flex;
@@ -119,12 +120,14 @@ const MenuToggle = styled.div`
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 1rem;
+  top: 1.5rem;
   right: 2.5rem;
   cursor: pointer;
   display: block;
+
   ${breakpoint('tablet')`
     display: none;
+    top: 1rem;
   `};
 `
 
@@ -144,22 +147,56 @@ const Menu = styled.ul<MenuProps>`
     text-align: center;
   `}
 
-  ${p => (p.visible ? `` : `display: none`)}
+  ${p =>
+    p.visible
+      ? `
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      color: ${p.theme.colors.primary400};
+
+      li:nth-child(2n) {
+        margin-right: 4rem;
+      }
+
+      li:last-child {
+        display: none;
+      }
+      `
+      : `display: none`}
 `
 
-const MenuItem = styled.li`
+const MenuItem = styled.li<NavProps>`
   ${Button} {
     margin-left: 4rem;
   }
 
-  ${breakpoint('mobile')`
-    padding: 0.2rem 0rem;
-  `}
+  ${breakpoint('mobile', 'tablet')`
+      padding: 0.5rem 0.4rem;
+      margin: 0.4rem 0.4rem 0 0;
+      border-radius: 6px;
+
+    ${p =>
+      p.variant == 'light'
+        ? `background-color: ${p.theme.colors.primary400}; color: ${
+            p.theme.colors.supWhite
+          }`
+        : `background-color: ${p.theme.colors.supWhite}; color: ${
+            p.theme.colors.primary400
+          }`}
+`}
 `
 
-const MenuItemLink = styled(Link)`
+const MenuItemLink = styled(Link)<MenuProps>`
   color: inherit;
   text-decoration: none;
+
+  ${p =>
+    p.visible &&
+    ` 
+    font-size: 5rem;
+      `}
 
   ${breakpoint('tablet')`
     margin-left: 1rem;
