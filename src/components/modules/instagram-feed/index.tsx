@@ -79,6 +79,7 @@ const GridGallery = styled.div`
   grid-template-rows: repeat(2, 1fr);
   text-align: center;
   grid-auto-flow: row dense;
+  margin-bottom: 4rem;
 
   ${breakpoint('mobile', 'tablet')`
     grid-template-columns: repeat(2, minmax(4rem, 1fr));
