@@ -11,33 +11,46 @@ interface SplitContentProps {
 const SplitContent: React.FC<
   SplitContentProps & React.HTMLProps<HTMLDivElement>
 > = ({ variant, children, className }) => (
-  <Section>
-    <Container>
-      <div className={className}>{children}</div>
-    </Container>
+  <Section className={className}>
+    <Container className="children">{children}</Container>
   </Section>
 )
 export default styled(SplitContent)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &:nth-child(2n) .children {
+    ${breakpoint('desktop')`
+    flex-direction: row-reverse;
+    justify-content: space-between;
 
-  div:nth-child(1) {
-    justify-content: flex-start;
+    div {
+      justify-content: flex-end;
+    }
+    `}
   }
 
-  div:nth-child(2) {
-    justify-content: flex-end;
-  }
+  .children {
+    display: flex;
+    align-items: center;
 
-  > div {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
+    ${breakpoint('mobile', 'tablet')`
+      flex-direction: column; 
 
-  padding: 4rem 0rem;
+      div {
+        justify-content: center;
+      }
+      
 
-  p {
-    max-width: 28em;
+
+    `}
+
+    > div {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    padding: 4rem 1rem;
+
+    p {
+      max-width: 28em;
+    }
   }
 `
