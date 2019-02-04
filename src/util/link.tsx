@@ -35,7 +35,6 @@ const BetterLink = (props: GatsbyLinkProps<any>): any => {
       <a
         {...anchorLinkProps}
         href={props.to.replace(sectionPrefix, '#')}
-        target={props.target || 'blank'}
         onClick={scrollToElement}
       >
         {props.children}
@@ -44,7 +43,7 @@ const BetterLink = (props: GatsbyLinkProps<any>): any => {
   }
 
   return (
-    <a {...anchorLinkProps} href={props.to}>
+    <a {...anchorLinkProps} href={props.to} target={props.target || '_blank'}>
       {props.children}
     </a>
   )
