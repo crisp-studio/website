@@ -9,7 +9,7 @@ import Card, { CardHeader } from '../components/common/card'
 import targetIcon from '../images/icons/target.svg'
 import codeIcon from '../images/icons/code.svg'
 import { Section, Container } from '../components/common/section'
-import SplitContent from '../components/common/splitcontent'
+import SplitContent from '../components/common/split-content'
 import svgUi from '../images/design-sprint-ui.svg'
 import breakpoint from 'styled-components-breakpoint'
 

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import GatsbyImage, { FluidObject } from 'gatsby-image'
 import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
-import SplitContent from '../components/common/splitcontent'
+import SplitContent from '../components/common/split-content'
 import HeroHeader from '../components/common/hero-header'
 import Gallery, { GalleryItem } from '../components/common/gallery'
 
