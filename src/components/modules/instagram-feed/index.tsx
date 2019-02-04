@@ -76,7 +76,6 @@ const GridGallery = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(4rem, 1fr));
   grid-gap: 1rem;
-  grid-template-rows: repeat(2, 1fr);
   text-align: center;
   grid-auto-flow: row dense;
   margin-bottom: 4rem;
