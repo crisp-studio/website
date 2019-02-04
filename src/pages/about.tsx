@@ -1,19 +1,19 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import GatsbyImage, { FluidObject } from 'gatsby-image'
 import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
 import SplitContent from '../components/common/splitcontent'
 import HeroHeader from '../components/common/heroheader'
-import Gallery from '../components/common/gallery'
-import gallery1 from '../images/gallery-1.jpg'
-import gallery2 from '../images/gallery-2.jpg'
-import gallery3 from '../images/gallery-3.jpg'
-import gallery4 from '../images/gallery-4.jpg'
-import gallery5 from '../images/gallery-5.jpg'
-import gallery6 from '../images/gallery-6.jpg'
+import Gallery, { GalleryItem } from '../components/common/gallery'
 
-const About = () => (
+interface AboutProps {
+  images: { [k: string]: FluidObject }
+}
+
+const About: React.FC<AboutProps> = ({ images }) => (
   <Layout variant="light">
-    <StyledHeroHeader bgColor="gray" variant="small">
+    <StyledHeroHeader variant="small">
       <h1>About</h1>
       <p>
         Crisp Studio is a design sprint and development studio that helps product
@@ -23,7 +23,7 @@ const About = () => (
     <SplitContentWrapper>
       <SplitContent>
         <div>
-          <h4>Small & Focused</h4>
+          <h4>Small &amp; Focused</h4>
           <p>
             Every project gets 100% of our attention. We don’t do overlapping
             projects, no 2 clients at the same time. To avoid half-hearted projects
@@ -64,34 +64,62 @@ const About = () => (
       </SplitContent>
     </SplitContentWrapper>
     <Gallery>
-      <div class="grid-item grid-item-1>">
-        <img src={gallery1} />
-      </div>
-      <div class="grid-item span-2 grid-item-2>">
-        <img src={gallery2} />
-      </div>
-      <div class="grid-item grid-item-3>">
-        <img src={gallery3} />
-      </div>
-      <div class="grid-item grid-item-4>">
-        <img src={gallery4} />
-      </div>
-      <div class="grid-item grid-item-5>">
-        <img src={gallery5} />
-      </div>
-      <div class="grid-item grid-item-6>">
-        <img src={gallery6} />
-      </div>
-      {/* <div class="grid-item grid-item-2">item 2</div>
-      <div class="grid-item grid-item-3">item 3</div>
-      <div class="grid-item grid-item-4">item 4</div>
-      <div class="grid-item span-2 grid-item-3">item 3</div>
-      <div class="grid-item grid-item-4">item 4</div> */}
+      <GalleryItem>
+        <GatsbyImage fluid={images['gallery-1.jpg']} />
+      </GalleryItem>
+      <GalleryItem rowSpan={2} colSpan={2}>
+        <GatsbyImage fluid={images['gallery-2.jpg']} />
+      </GalleryItem>
+      <GalleryItem rowSpan={2}>
+        <GatsbyImage fluid={images['gallery-3.jpg']} />
+      </GalleryItem>
+      <GalleryItem rowSpan={2}>
+        <GatsbyImage fluid={images['gallery-4.jpg']} />
+      </GalleryItem>
+      <GalleryItem>
+        <GatsbyImage fluid={images['gallery-5.jpg']} />
+      </GalleryItem>
+      <GalleryItem colSpan={2}>
+        <GatsbyImage fluid={images['gallery-6.jpg']} />
+      </GalleryItem>
     </Gallery>
   </Layout>
 )
 
-export default About
+const generateImageMap = (data: any) =>
+  data.allFile.edges.reduce(
+    (acc: { [k: string]: object }, cur: any) => ({
+      ...acc,
+      [cur.node.base]: cur.node.childImageSharp.fluid,
+    }),
+    {},
+  )
+
+const AboutImages: React.FC = () => (
+  <StaticQuery
+    query={graphql`
+      {
+        allFile(filter: { relativePath: { glob: "gallery/*" } }) {
+          edges {
+            node {
+              base
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 80) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+  >
+    {data => <About images={generateImageMap(data)} />}
+  </StaticQuery>
+)
+
+export default AboutImages
 
 const SplitContentWrapper = styled.div`
   padding: 4rem 0;
