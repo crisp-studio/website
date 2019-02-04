@@ -1,14 +1,9 @@
 {
-  "include": [
-    "./src/**/*"
-  ],
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
@@ -16,6 +11,7 @@
     "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "noImplicitAny": false
+    "noImplicitAny": true,
+    "importHelpers": true
   }
 }
