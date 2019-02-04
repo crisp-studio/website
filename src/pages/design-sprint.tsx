@@ -11,14 +11,17 @@ import svgFri from '../images/design-sprint-friday.svg'
 
 const DesignSprint = () => (
   <Layout variant="light">
-    <StyledHeroHeader bgColor="gray" variant="small">
+    <HeroHeader variant="small">
       <h1>Design Sprint</h1>
       <p>
         Solve big product challenges and test new ideas in 5 days. Get user insights
         before launching and see how customers react.{' '}
       </p>
-    </StyledHeroHeader>
+    </HeroHeader>
     <SplitContent>
+      <ImageContainer>
+        <img src={svgPostIts} />
+      </ImageContainer>
       <div>
         <h4>What is a Design Sprint?</h4>
         <p>
@@ -27,9 +30,6 @@ const DesignSprint = () => (
           prototype tested with real users at the end of the week.{' '}
         </p>
       </div>
-      <ImageContainer>
-        <img src={svgPostIts} />
-      </ImageContainer>
     </SplitContent>
     <SplitContent>
       <ImageContainer>
@@ -45,6 +45,9 @@ const DesignSprint = () => (
       </div>
     </SplitContent>
     <SplitContent>
+      <ImageContainer>
+        <img src={svgMonTues} />
+      </ImageContainer>
       <div>
         <h4>Generate Solutions</h4>
         <p>
@@ -54,9 +57,6 @@ const DesignSprint = () => (
           focus and creating multiple solutions to solve the challenge.{' '}
         </p>
       </div>
-      <ImageContainer>
-        <img src={svgMonTues} />
-      </ImageContainer>
     </SplitContent>
     <SplitContent>
       <ImageContainer>
@@ -73,6 +73,9 @@ const DesignSprint = () => (
       </div>
     </SplitContent>
     <SplitContent>
+      <ImageContainer>
+        <img src={svgFri} />
+      </ImageContainer>
       <div>
         <h4>Test & Learn</h4>
         <p>
@@ -82,9 +85,6 @@ const DesignSprint = () => (
           doesn’t work as well as where we have to readjust and iterate.{' '}
         </p>
       </div>
-      <ImageContainer>
-        <img src={svgFri} />
-      </ImageContainer>
     </SplitContent>
   </Layout>
 )
@@ -93,27 +93,7 @@ const ImageContainer = styled.div`
   display: flex;
 
   img {
-    width: 70%;
-  }
-`
-
-const StyledHeroHeader = styled(HeroHeader)`
-  .children {
-    display: flex;
-    align-items: center;
-
-    h1 {
-      text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
-      background-color: ${p => p.theme.colors.primary400};
-      color: transparent;
-      -webkit-background-clip: text;
-      -moz-background-clip: tesxt;
-      background-clip: text;
-    }
-
-    p {
-      max-width: 30rem;
-    }
+    width: 70;
   }
 `
 
