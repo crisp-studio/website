@@ -20,6 +20,7 @@ export const GalleryItem = styled.div<{
   colSpan?: number
 }>`
   border-radius: ${p => p.theme.sizes.borderRadius};
+  box-shadow: ${p => p.theme.shadows.elevation100};
   overflow: hidden;
 
   @media (min-width: 769px) {
