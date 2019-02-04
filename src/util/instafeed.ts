@@ -10,7 +10,7 @@ export const options = {
   sortBy: 'none', // none, least-commented, least-liked, least-recent, most-commented, most-liked, most-recent, random
   tagName: null,
   userId: '3090055275',
-  limit: 8,
+  limit: 4,
 }
 
 export const instagramUrl = buildUrl(options)
