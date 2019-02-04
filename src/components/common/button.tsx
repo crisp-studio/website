@@ -5,6 +5,7 @@ import Link from '../../util/link'
 interface ButtonProps {
   variant?: 'green' | 'white'
   icon?: any
+  disabled?: boolean
 }
 
 const Button: React.FC<ButtonProps & React.ComponentProps<typeof Link>> = ({
@@ -22,7 +23,7 @@ const Button: React.FC<ButtonProps & React.ComponentProps<typeof Link>> = ({
 export default styled(Button)<ButtonProps>`
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
+  cursor: ${p => (p.disabled ? 'default' : 'pointer')};
 
   transition: box-shadow 0.2s, transform 0.2s;
 
@@ -30,12 +31,15 @@ export default styled(Button)<ButtonProps>`
   height: 2rem;
 
   border-radius: ${p => p.theme.sizes.borderRadius};
-  box-shadow: ${p => p.theme.shadows.elevation100};
+  box-shadow: ${p => (p.disabled ? 'none' : p.theme.shadows.elevation100)};
 
-  &:hover {
-    box-shadow: ${p => p.theme.shadows.elevation200};
-    transform: translateY(-2px);
-  }
+  ${p =>
+    !p.disabled &&
+    `&:hover {
+      box-shadow: ${p.theme.shadows.elevation200};
+      transform: translateY(-2px);
+    }
+  `}
 
   font-weight: 500;
   font-size: 14px;
