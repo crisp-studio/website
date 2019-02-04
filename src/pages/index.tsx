@@ -43,7 +43,7 @@ const IndexPage = () => (
         </StyledCard>
       </StyledContainer>
     </StyledSection>
-    <SplitContent>
+    <StyledSplitContent>
       <ImageContainer>
         <img src={svgUi} />
       </ImageContainer>
@@ -56,7 +56,7 @@ const IndexPage = () => (
           delight both you and your users.
         </p>
       </div>
-    </SplitContent>
+    </StyledSplitContent>
     <Section>
       <Container>
         <InstagramIntro>
@@ -116,6 +116,10 @@ const StyledCard = styled(Card)`
   p {
     margin-bottom: 1rem;
   }
+`
+
+const StyledSplitContent = styled(SplitContent)`
+  padding: 6rem 1rem;
 `
 
 export default IndexPage
