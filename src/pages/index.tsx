@@ -37,8 +37,8 @@ const IndexPage = () => (
             Create new products or improve existing ones. Go from a big challenge to
             realistic prototype tested by real users in 5 days.
           </p>
-          <Button variant="green" to="/dev-sprint/">
-            Dev Sprint
+          <Button variant="green" to="/dev-sprint/" disabled>
+            Coming Soon
           </Button>
         </StyledCard>
       </StyledContainer>
