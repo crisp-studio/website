@@ -20,6 +20,11 @@ export default class FooterBar extends React.Component {
             <li>
               <FooterLink to="#">Privacy Policy</FooterLink>
             </li>
+            <li>
+              <FooterLink to="https://playbook.crisp.studio">
+                Our Playbook
+              </FooterLink>
+            </li>
           </FooterMenu>
           <Social>
             <SocialLink to="https://www.instagram.com/crispstudio/">
