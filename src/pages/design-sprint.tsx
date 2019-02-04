@@ -18,7 +18,7 @@ const DesignSprint = () => (
         before launching and see how customers react.{' '}
       </p>
     </HeroHeader>
-    <SplitContent>
+    <StyledSplitContent alternateSides>
       <ImageContainer>
         <img src={svgPostIts} />
       </ImageContainer>
@@ -30,8 +30,8 @@ const DesignSprint = () => (
           prototype tested with real users at the end of the week.{' '}
         </p>
       </div>
-    </SplitContent>
-    <SplitContent>
+    </StyledSplitContent>
+    <StyledSplitContent alternateSides alignItems="center">
       <ImageContainer>
         <img src={svgExplanation} />
       </ImageContainer>
@@ -43,8 +43,8 @@ const DesignSprint = () => (
           get your product right while saving a lot of time.{' '}
         </p>
       </div>
-    </SplitContent>
-    <SplitContent>
+    </StyledSplitContent>
+    <StyledSplitContent alternateSides alignItems="center">
       <ImageContainer>
         <img src={svgMonTues} />
       </ImageContainer>
@@ -57,8 +57,8 @@ const DesignSprint = () => (
           focus and creating multiple solutions to solve the challenge.{' '}
         </p>
       </div>
-    </SplitContent>
-    <SplitContent>
+    </StyledSplitContent>
+    <StyledSplitContent alternateSides alignItems="center">
       <ImageContainer>
         <img src={svgWedThr} />
       </ImageContainer>
@@ -71,8 +71,8 @@ const DesignSprint = () => (
           facade to test on Friday.{' '}
         </p>
       </div>
-    </SplitContent>
-    <SplitContent>
+    </StyledSplitContent>
+    <StyledSplitContent alternateSides alignItems="center">
       <ImageContainer>
         <img src={svgFri} />
       </ImageContainer>
@@ -85,15 +85,29 @@ const DesignSprint = () => (
           doesn’t work as well as where we have to readjust and iterate.{' '}
         </p>
       </div>
-    </SplitContent>
+    </StyledSplitContent>
   </Layout>
 )
 
 const ImageContainer = styled.div`
-  display: flex;
-
   img {
-    width: 70;
+    width: 70%;
+    height: auto;
+    display: block;
+  }
+`
+
+const StyledSplitContent = styled(SplitContent)`
+  padding: 6rem 1rem;
+
+  @media (min-width: 1025px) {
+    &:nth-child(even) {
+      ${ImageContainer} {
+        img {
+          margin-left: auto;
+        }
+      }
+    }
   }
 `
 
