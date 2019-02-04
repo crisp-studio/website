@@ -48,7 +48,7 @@ export default class Instagram extends React.Component {
         <Container>
           <GridGallery>
             <Fragment>
-              {data.map(({ images, link }, index) => {
+              {data.map(({ images, link }) => {
                 const image = images[options.resolution]
                 return (
                   <a href={link} target="_blank">
