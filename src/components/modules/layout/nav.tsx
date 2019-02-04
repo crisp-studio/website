@@ -57,9 +57,9 @@ export default class Nav extends React.Component<NavProps, NavState> {
             <MenuItem variant={this.props.variant}>
               <MenuItemLink to="/design-sprint/">Design Sprint</MenuItemLink>
             </MenuItem>
-            <MenuItem variant={this.props.variant}>
+            {/*<MenuItem variant={this.props.variant}>
               <MenuItemLink to="/dev-sprint/">Dev Sprint</MenuItemLink>
-            </MenuItem>
+            </MenuItem>*/}
             <MenuItem variant={this.props.variant}>
               <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
@@ -107,7 +107,7 @@ const NavContainer = styled(Container)`
   padding-bottom: 1rem;
   padding-top: 1rem;
 
-  ${breakpoint('tablet')`
+  ${breakpoint('desktop')`
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
@@ -125,14 +125,14 @@ const MenuToggle = styled.div`
   cursor: pointer;
   display: block;
 
-  ${breakpoint('tablet')`
+  ${breakpoint('desktop')`
     display: none;
     top: 1rem;
   `};
 `
 
 const Logo = styled(Link)<NavProps>`
-  display: block;
+  display: inline-block;
 
   img {
     width: 8rem;
@@ -147,24 +147,17 @@ const Menu = styled.ul<MenuProps>`
     text-align: center;
   `}
 
-  ${p =>
-    p.visible
-      ? `
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-      color: ${p.theme.colors.primary400};
+  @media (max-width: 1024px) {
+    display: ${p => (p.visible ? 'flex' : 'none')};
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    color: ${p => p.theme.colors.primary400};
 
-      li:nth-child(2n) {
-        margin-right: 4rem;
-      }
-
-      li:last-child {
-        display: none;
-      }
-      `
-      : `display: none`}
+    li:last-child {
+      display: none;
+    }
+  }
 `
 
 const MenuItem = styled.li<NavProps>`
@@ -172,33 +165,23 @@ const MenuItem = styled.li<NavProps>`
     margin-left: 4rem;
   }
 
-  ${breakpoint('mobile', 'tablet')`
-      padding: 0.5rem 0.4rem;
-      margin: 0.4rem 0.4rem 0 0;
-      border-radius: 6px;
+  @media (max-width: 1024px) {
+    padding: 0.5rem 0.4rem;
+    margin: 0.4rem 0.4rem 0 0;
+    border-radius: 6px;
 
-    ${p =>
-      p.variant == 'light'
-        ? `background-color: ${p.theme.colors.primary400}; color: ${
-            p.theme.colors.supWhite
-          }`
-        : `background-color: ${p.theme.colors.supWhite}; color: ${
-            p.theme.colors.primary400
-          }`}
-`}
+    color: ${p =>
+      p.variant == 'light' ? p.theme.colors.supWhite : p.theme.colors.primary400};
+    background-color: ${p =>
+      p.variant == 'light' ? p.theme.colors.primary400 : p.theme.colors.supWhite};
+  }
 `
 
-const MenuItemLink = styled(Link)<MenuProps>`
+const MenuItemLink = styled(Link)`
   color: inherit;
   text-decoration: none;
 
-  ${p =>
-    p.visible &&
-    ` 
-    font-size: 5rem;
-      `}
-
-  ${breakpoint('tablet')`
-    margin-left: 1rem;
+  ${breakpoint('desktop')`
+    margin-left: 2rem;
   `}
 `
