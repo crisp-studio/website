@@ -34,8 +34,8 @@ const IndexPage = () => (
         <StyledCard>
           <CardHeader icon={codeIcon}>Dev Sprints</CardHeader>
           <p>
-            Create new products or improve existing ones. Go from a big challenge to
-            realistic prototype tested by real users in 5 days.
+            You want it, we make it. If you are sure about an idea, we develop a
+            minimum viable product for you in two weeks or less.
           </p>
           <Button variant="green" to="/dev-sprint/" disabled>
             Coming Soon
