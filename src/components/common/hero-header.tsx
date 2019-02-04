@@ -23,7 +23,7 @@ export default styled(HeroHeader)<HeroHeaderProps>`
   background-color: ${p => p.theme.colors.gray100};
 
   ${breakpoint('mobile', 'tablet')`
-    padding: 12rem 0 6rem 0;
+    padding: 10rem 0 6rem 0;
   `}
 
   .children {
@@ -57,6 +57,10 @@ export default styled(HeroHeader)<HeroHeaderProps>`
   p {
     color: ${p => p.theme.colors.gray600};
     max-width: 24rem;
+
+    ${breakpoint('mobile', 'tablet')`
+      text-align: center;
+    `}
   }
 
   ${p =>
@@ -91,7 +95,7 @@ export default styled(HeroHeader)<HeroHeaderProps>`
     }
 
     @media(max-width: 1025px) {
-    padding: 12rem 0 12rem 0;
+      padding: 12rem 0 12rem 0;
     }
   `}
 
