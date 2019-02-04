@@ -49,7 +49,7 @@ export default styled(HeroHeader)<HeroHeaderProps>`
 
     ${breakpoint('mobile', 'tablet')`
       font-size: 3rem;
-      line-height: 3rem;
+      line-height: 4rem;
       margin-bottom: 1rem;
     `}
   }
