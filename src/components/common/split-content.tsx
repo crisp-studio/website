@@ -18,19 +18,6 @@ const SplitContent: React.FC<SplitProps & React.HTMLProps<HTMLDivElement>> = ({
   </Section>
 )
 export default styled(SplitContent)`
-  ${p =>
-    p.alternateSides &&
-    `&:nth-child(2n) .children {
-      ${breakpoint('desktop')`
-        flex-direction: row-reverse;
-
-        div {
-          justify-content: flex-end;
-        }
-      `}
-    }
-  `}
-
   .children {
     display: flex;
     flex-grow: 1;
@@ -59,4 +46,13 @@ export default styled(SplitContent)`
       }
     `}
   }
+
+  ${p =>
+    p.alternateSides &&
+    `&:nth-child(2n) .children {
+      @media(min-width: 1025px) {
+        flex-direction: row-reverse;
+      }
+    }
+  `}
 `
