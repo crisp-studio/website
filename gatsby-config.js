@@ -3,7 +3,6 @@ require('ts-node').register()
 const theme = require('./src/theme')
 
 module.exports = {
-  pathPrefix: `/`,
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
