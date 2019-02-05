@@ -5,6 +5,7 @@ import instagram from '../../../images/instagram.svg'
 import medium from '../../../images/medium.svg'
 import linkedin from '../../../images/linkedin.svg'
 import Link from '../../../util/link'
+import { withPrefix } from 'gatsby'
 
 import { Section, Container } from '../../common/section'
 
@@ -15,10 +16,14 @@ export default class FooterBar extends React.Component {
         <FooterContainer>
           <FooterMenu>
             <li>
-              <FooterLink to="/docs/disclaimer.pdf">Disclaimer</FooterLink>
+              <FooterLink to={withPrefix('docs/disclaimer.pdf')}>
+                Disclaimer
+              </FooterLink>
             </li>
             <li>
-              <FooterLink to="/docs/privacy.pdf">Privacy Policy</FooterLink>
+              <FooterLink to={withPrefix('docs/privacy.pdf')}>
+                Privacy Policy
+              </FooterLink>
             </li>
             <li>
               <FooterLink to="https://playbook.crisp.studio">
