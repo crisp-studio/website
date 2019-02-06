@@ -7,8 +7,8 @@ import theme from '../theme'
 
 const sectionPrefix = '#'
 
-const BetterLink = (props: GatsbyLinkProps<any>): any => {
-  if (props.to && props.to.startsWith('/')) {
+const BetterLink = (props: GatsbyLinkProps<{ external?: boolean }>): any => {
+  if (props.to && props.to.startsWith('/') && !external) {
     const { ref, ...linkProps } = props
     return (
       <AniLink cover bg={theme.colors.primary400} {...linkProps}>

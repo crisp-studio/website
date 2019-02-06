@@ -15,10 +15,14 @@ export default class FooterBar extends React.Component {
         <FooterContainer>
           <FooterMenu>
             <li>
-              <FooterLink to="/pdf/disclaimer.pdf">Disclaimer</FooterLink>
+              <FooterLink to="/pdf/disclaimer.pdf" external>
+                Disclaimer
+              </FooterLink>
             </li>
             <li>
-              <FooterLink to="/pdf/privacy.pdf">Privacy Policy</FooterLink>
+              <FooterLink to="/pdf/privacy.pdf" external>
+                Privacy Policy
+              </FooterLink>
             </li>
             <li>
               <FooterLink to="https://playbook.crisp.studio">
