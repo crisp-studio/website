@@ -7,7 +7,7 @@ import theme from '../theme'
 
 const sectionPrefix = '#'
 
-const BetterLink = (props: GatsbyLinkProps<{ external?: boolean }>): any => {
+const BetterLink = (props: GatsbyLinkProps<any> & { external?: boolean }): any => {
   if (props.to && props.to.startsWith('/') && !external) {
     const { ref, ...linkProps } = props
     return (
