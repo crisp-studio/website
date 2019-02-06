@@ -33,12 +33,21 @@ export default styled(Button)<ButtonProps>`
   border-radius: ${p => p.theme.sizes.borderRadius};
   box-shadow: ${p => (p.disabled ? 'none' : p.theme.shadows.elevation100)};
 
+
   ${p =>
     !p.disabled &&
-    `&:hover {
+    `
+    &:hover {
       box-shadow: ${p.theme.shadows.elevation200};
       transform: translateY(-2px);
     }
+  `}
+
+  ${p =>
+    p.disabled &&
+    `
+    opacity: 0.8;
+    pointer-events: none;
   `}
 
   font-weight: 500;
