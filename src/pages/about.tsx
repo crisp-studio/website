@@ -6,6 +6,7 @@ import styled from '../util/styled-components'
 import SplitContent from '../components/common/split-content'
 import HeroHeader from '../components/common/hero-header'
 import Gallery, { GalleryItem } from '../components/common/gallery'
+import Helmet from 'react-helmet'
 
 interface AboutProps {
   images: { [k: string]: FluidObject }
@@ -13,11 +14,19 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ images }) => (
   <Layout variant="light">
+    <Helmet>
+      <title>About – Crisp Studio</title>
+      <meta
+        name="description"
+        content="Crisp Studio is a design sprint and development studio that helps product teams to learn and move faster."
+      />
+    </Helmet>
+
     <StyledHeroHeader variant="small">
       <h1>About</h1>
       <p>
         Crisp Studio is a design sprint and development studio that helps product
-        teams to learn and move faster.{' '}
+        teams to learn and move faster.
       </p>
     </StyledHeroHeader>
     <SplitContentWrapper>

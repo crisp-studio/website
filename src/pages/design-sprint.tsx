@@ -8,14 +8,22 @@ import svgExplanation from '../images/design-sprint-explanation.svg'
 import svgMonTues from '../images/design-sprint-monday-tuesday.svg'
 import svgWedThr from '../images/design-sprint-wednesday-thursday.svg'
 import svgFri from '../images/design-sprint-friday.svg'
+import Helmet from 'react-helmet'
 
 const DesignSprint = () => (
   <Layout variant="light">
+    <Helmet>
+      <title>Design Sprint – Crisp Studio</title>
+      <meta
+        name="description"
+        content="Solve big product challenges and test new ideas in 5 days. Get user insights before launching and see how customers react."
+      />
+    </Helmet>
     <HeroHeader variant="small">
       <h1>Design Sprint</h1>
       <p>
         Solve big product challenges and test new ideas in 5 days. Get user insights
-        before launching and see how customers react.{' '}
+        before launching and see how customers react.
       </p>
     </HeroHeader>
     <StyledSplitContent alternateSides>

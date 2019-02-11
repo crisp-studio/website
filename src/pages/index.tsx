@@ -1,6 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../components/modules/layout'
 import styled from '../util/styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 import Button from '../components/common/button'
 import Instagram from '../components/modules/instagram-feed'
@@ -11,13 +13,16 @@ import codeIcon from '../images/icons/code.svg'
 import { Section, Container } from '../components/common/section'
 import SplitContent from '../components/common/split-content'
 import svgUi from '../images/design-sprint-ui.svg'
-import breakpoint from 'styled-components-breakpoint'
 
 const IndexPage = () => (
   <Layout variant="dark">
+    <Helmet>
+      <title>Crisp Studio // Build Better Products Faster.</title>
+      <meta name="description" content="Get your product right and move faster by testing ideas super early." />
+    </Helmet>
     <HeroHeader variant="large">
       <h1>Launch better products faster.</h1>
-      <p>Get your product right and move faster by testing ideas super early. </p>
+      <p>Get your product right and move faster by testing ideas super early.</p>
     </HeroHeader>
     <StyledSection>
       <StyledContainer>
