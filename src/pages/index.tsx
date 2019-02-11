@@ -17,11 +17,11 @@ import svgUi from '../images/design-sprint-ui.svg'
 const IndexPage = () => (
   <Layout variant="dark">
     <Helmet>
-      <title>Crisp Studio // Build Better Products Faster.</title>
+      <title>Crisp Studio // Launch Better Products Faster.</title>
       <meta name="description" content="Get your product right and move faster by testing ideas super early." />
     </Helmet>
     <HeroHeader variant="large">
-      <h1>Launch better products faster.</h1>
+      <h1>Launch Better Products Faster.</h1>
       <p>Get your product right and move faster by testing ideas super early.</p>
     </HeroHeader>
     <StyledSection>
