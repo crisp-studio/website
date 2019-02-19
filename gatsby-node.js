@@ -1,7 +1,34 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path')
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createRedirect } = actions
+
+  const results = await graphql(`
+    {
+      allAirtable {
+        edges {
+          node {
+            data {
+              Short_Link
+              Redirect
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  for (const edge of results.data.allAirtable.edges) {
+    const { Short_Link, Redirect } = edge.node.data
+
+    if (!Short_Link || !Redirect) {
+      continue
+    }
+
+    createRedirect({
+      fromPath: path.join('/', Short_Link),
+      toPath: Redirect,
+      isPermanent: false,
+    })
+  }
+}

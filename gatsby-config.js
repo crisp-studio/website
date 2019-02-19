@@ -1,10 +1,12 @@
 require('ts-node').register()
+require('dotenv-safe').config()
 
 const theme = require('./src/theme')
 
 module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
@@ -20,6 +22,18 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_KEY,
+        tables: [
+          {
+            baseId: `appFkvActRkDIjRTH`,
+            tableName: `Link List`,
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
