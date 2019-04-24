@@ -64,7 +64,7 @@ export default class Nav extends React.Component<NavProps, NavState> {
               <MenuItemLink to="/about/">About</MenuItemLink>
             </MenuItem>
             <MenuItem variant={this.props.variant}>
-              <MenuItemLink to="https://medium.com/crispstudio">Blog</MenuItemLink>
+              <MenuItemLink to="https://betterinbetween.com">Blog</MenuItemLink>
             </MenuItem>
             <MenuItem variant={this.props.variant}>
               <Button
