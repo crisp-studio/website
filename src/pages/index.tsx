@@ -5,6 +5,7 @@ import styled from '../util/styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import Button from '../components/common/button'
+import Featured from '../components/common/featured'
 import Instagram from '../components/modules/instagram-feed'
 import HeroHeader from '../components/common/hero-header'
 import Card, { CardHeader } from '../components/common/card'
@@ -26,26 +27,7 @@ const IndexPage = () => (
     </HeroHeader>
     <StyledSection>
       <StyledContainer>
-        <StyledCard>
-          <CardHeader icon={targetIcon}>Design Sprints</CardHeader>
-          <p>
-            Create new products or improve existing ones. Go from a big challenge to
-            realistic prototype tested by real users in 5 days.
-          </p>
-          <Button variant="green" to="/design-sprint/">
-            Design Sprint
-          </Button>
-        </StyledCard>
-        <StyledCard>
-          <CardHeader icon={codeIcon}>Dev Sprints</CardHeader>
-          <p>
-            You want it, we make it. If you are sure about an idea, we develop a
-            minimum viable product for you in two weeks or less.
-          </p>
-          <Button variant="green" to="/dev-sprint/" disabled>
-            Coming Soon
-          </Button>
-        </StyledCard>
+        <Featured />
       </StyledContainer>
     </StyledSection>
     <StyledSplitContent>
@@ -107,13 +89,17 @@ const StyledContainer = styled(Container)`
     flex-wrap: wrap;
   `}
 
-  > div:first-child {
+  > div {
     margin-right: 2rem;
 
     ${breakpoint('mobile', 'tablet')`
+      margin-right: 0;
+      margin-bottom: 1rem;
+    `}
+  }
+
+  > div:last-child {
     margin-right: 0;
-    margin-bottom: 1rem;
-  `}
   }
 `
 

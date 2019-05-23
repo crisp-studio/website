@@ -9,6 +9,7 @@ export default styled.div`
   transition: box-shadow 0.2s, transform 0.2s;
 
   padding: 2rem 2rem;
+  overflow: hidden;
 
   border-radius: ${p => p.theme.sizes.borderRadius};
   box-shadow: ${p => p.theme.shadows.elevation100};
