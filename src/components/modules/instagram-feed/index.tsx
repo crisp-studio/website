@@ -31,36 +31,36 @@ export default class Instagram extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Fragment>'Loading...'</Fragment>
+      return <Fragment>Loading...</Fragment>
     }
 
     if (this.state.error) {
-      return <Fragment>`Error: ${this.state.error}`</Fragment>
+      return <Fragment>Error: {this.state.error}</Fragment>
     }
 
     if (!this.state.json) return null
 
     const { data } = this.state.json
-    console.log(data)
 
     return (
       <Section>
         <Container>
           <GridGallery>
             <Fragment>
-              {data.map(({ images, link }) => {
-                const image = images[options.resolution]
-                return (
-                  <a href={link} target="_blank">
-                    <GridItem>
-                      <GridImage src={image.url} />
-                      <GridHoverLink>
-                        <img src={instagram} />
-                      </GridHoverLink>
-                    </GridItem>
-                  </a>
-                )
-              })}
+              {data &&
+                data.map(({ images, link }) => {
+                  const image = images[options.resolution]
+                  return (
+                    <a href={link} target="_blank">
+                      <GridItem>
+                        <GridImage src={image.url} />
+                        <GridHoverLink>
+                          <img src={instagram} />
+                        </GridHoverLink>
+                      </GridItem>
+                    </a>
+                  )
+                })}
             </Fragment>
           </GridGallery>
         </Container>
